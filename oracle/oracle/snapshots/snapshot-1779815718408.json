@@ -1,0 +1,9 @@
+{
+  "modelId": "claude-opus-4-7",
+  "outputUsdPerMtok": 25,
+  "outputPriceMicro": 25000000,
+  "observedAt": "2026-05-26T17:15:18.405Z",
+  "sourceUrl": "https://platform.claude.com/docs/en/about-claude/pricing.md",
+  "evidenceHash": "c50ec7518482e630a1fdb80297d33b298da2a04af0f1db057a2676273dccd25a",
+  "sourceRow": "| Claude Opus 4.7     | $5 / MTok         | $6.25 / MTok    | $10 / MTok      | $0.50 / MTok | $25 / MTok    |"
+}

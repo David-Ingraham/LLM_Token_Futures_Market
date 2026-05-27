@@ -1,0 +1,14 @@
+[package]
+name = "llm_token_futures"
+version = "0.1.0"
+description = "Cash-settled Opus 4.7 output token index futures"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "llm_token_futures"
+
+[dependencies]
+borsh = "0.9.3"
+blake3 = "=1.5.5"
+solana-program = "=1.16.27"

@@ -1,0 +1,28 @@
+{
+  "name": "llm-token-futures",
+  "private": true,
+  "workspaces": [
+    "settlement",
+    "packages/sdk",
+    "oracle",
+    "app"
+  ],
+  "scripts": {
+    "test:settlement": "npm test -w settlement",
+    "test:sdk": "npm test -w @llm-token-futures/sdk",
+    "test:oracle": "npm test -w @llm-token-futures/oracle",
+    "build:sdk": "npm run build -w @llm-token-futures/sdk",
+    "build:app": "npm run build -w app",
+    "dev": "npm run dev -w app",
+    "oracle:snapshot": "npm run snapshot -w @llm-token-futures/oracle",
+    "oracle:post": "npm run post-price -w @llm-token-futures/oracle",
+    "deploy:devnet": "tsx scripts/deploy-devnet.ts"
+  },
+  "devDependencies": {
+    "@solana/spl-token": "^0.4.9",
+    "@solana/web3.js": "^1.95.4",
+    "borsh": "^2.0.0",
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3"
+  }
+}

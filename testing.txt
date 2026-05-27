@@ -1,0 +1,15 @@
+Testing before code (short answer)
+
+Work bottom-up so you do not debug Solana and math at once:
+
+Settlement math (first, no blockchain) — Scripts or a spreadsheet: long/short PnL for higher, lower, and flat settlement; many contracts; integer rounding. Check vault solvency: total USDC in = total paid out after settle.
+
+State machine (still off-chain) — Table of allowed actions by time and market status (open after cutoff, settle without price, etc.). Can mirror future program rules in plain tests.
+
+Oracle parser (off-chain) — Fake pricing-page fixtures; parser must return Opus 4.7 output micro-dollars and stable evidence hashes.
+
+Program tests (after code) — Local Solana validator, fake USDC: two users long/short → time passes → oracle posts price → settle → withdraw; assert token balances.
+
+Adversarial program tests — Double settle, open after halt, bad margin, wrong oracle signer.
+
+Devnet dry run (later) — Optional full walkthrough with test wallets before real funds.

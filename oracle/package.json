@@ -1,0 +1,22 @@
+{
+  "name": "@llm-token-futures/oracle",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "snapshot": "tsx src/cli-snapshot.ts",
+    "post-price": "tsx src/cli-post-price.ts"
+  },
+  "dependencies": {
+    "@llm-token-futures/sdk": "*",
+    "@solana/web3.js": "^1.95.4",
+    "borsh": "^2.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3",
+    "vitest": "^3.1.4",
+    "tsx": "^4.19.4"
+  }
+}
