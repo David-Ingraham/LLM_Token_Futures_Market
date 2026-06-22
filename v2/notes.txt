@@ -8,3 +8,45 @@ i belive the validator listend on a desginated port for rpc
 
 once program is deplyed you can run logs to watch the logs for the pgramag, you can also build and 
 run basic clint as well. 
+
+
+what is done:
+
+-sent funds to program deployed to localinstace of sol blockchain. bocks and transations are stored in the test-ledger at the project root
+
+the project scafolding was created by anchor in anchor init. much like npm create @react-app
+
+in the programs dir is where the code is for the code that runs on chain, basically like the backend. 
+
+ignore all the typseciprt bullshit as much as you can or for as long as you can
+
+too many godamn damn depencenies to automate things that can be done manually pretty simeply. 
+you also skip a lot of the blcahin infra stuff doing that 
+
+anywho, im not sure if you restart the vaildaotr if it can read frothe same test-ledger and pass requests(wording)
+to the program. ie if it can just read from the test-ledger to get the deployed programs id
+
+the escrow accepts funds, holds them and send them back.
+
+adidiotnal testing could be to check balance of cli wallet that interacts witht he program that the lcient 
+pays with, check that balance obviosuly just vie the command lien with solaan balance command after running cleint 
+and after 5 minutes 
+
+runnign soalan logs will show the transations that are happening on the chain that the validator is processing,
+show what instructions are running and what accounts are being used and more. also will print logs wirten in your
+sol program code
+
+ deleting test legedr means you delte the blocks that hold / host the program you deplyed.
+ so you need reploy with anchor deploy. 
+
+ if you change the code for the program you obviosuy need to rebuild it, and redeploy it. 
+
+
+ this part seems important and i dont fully get it . basically quesiton is started this doc with i think.
+
+ Program ID: From test_escrow::ID — imported via the test-escrow crate dependency, which reads declare_id! in lib.rs. Not from the chain.
+
+RPC port: Cluster::Localnet in your client hardcodes http://127.0.0.1:8899. Not from solana config — that's only for CLI commands.
+
+For devnet you'd use Cluster::Devnet or Cluster::Custom("https://...").
+
