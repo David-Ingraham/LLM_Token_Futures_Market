@@ -1,0 +1,10 @@
+run local vlaidator, someseetign in toml files and root config at ~/solana/config
+
+^not sure where all the config data goes or comes from
+
+if validator is stuck delete the test ledger and re run it, then you have to redploy the porgram to that validator.
+
+i belive the validator listend on a desginated port for rpc
+
+once program is deplyed you can run logs to watch the logs for the pgramag, you can also build and 
+run basic clint as well. 

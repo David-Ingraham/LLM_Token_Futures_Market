@@ -1,0 +1,36 @@
+import { Connection, PublicKey } from "@solana/web3.js";
+export type MarketAccount = {
+    pubkey: PublicKey;
+    magic: bigint;
+    authority: PublicKey;
+    oracle: PublicKey;
+    mint: PublicKey;
+    vault: PublicKey;
+    marketId: bigint;
+    entryPriceMicro: bigint;
+    maxSettlementPriceMicro: bigint;
+    settlementPriceMicro: bigint;
+    openTs: bigint;
+    tradeCutoffTs: bigint;
+    expiryTs: bigint;
+    feeBps: number;
+    contractMtok: bigint;
+    status: number;
+    bump: number;
+    vaultBump: number;
+};
+export type PositionAccount = {
+    pubkey: PublicKey;
+    magic: bigint;
+    owner: PublicKey;
+    market: PublicKey;
+    side: number;
+    contracts: bigint;
+    lockedMargin: bigint;
+    settled: boolean;
+    bump: number;
+};
+export declare function decodeMarket(data: Uint8Array, pubkey: PublicKey): MarketAccount | null;
+export declare function decodePosition(data: Uint8Array, pubkey: PublicKey): PositionAccount | null;
+export declare function fetchMarket(connection: Connection, address: PublicKey): Promise<MarketAccount | null>;
+export declare function fetchPosition(connection: Connection, address: PublicKey): Promise<PositionAccount | null>;

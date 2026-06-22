@@ -1,15 +1,7 @@
-# Dependencies
 node_modules/
-.npm-cache/
-
-# Build output
-dist/
-target/
-*.so
-
-# Anchor / Solana
-.anchor/
-test-ledger/
+onchain/target/
+onchain/.anchor/
+onchain/test-ledger/
 
 # Deploy / local config (program id, market keys)
 devnet.json
