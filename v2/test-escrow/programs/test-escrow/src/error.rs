@@ -8,4 +8,6 @@ pub enum ErrorCode {
     Unauthorized,
     #[msg("Deposit amount must be greater than zero")]
     InvalidAmount,
+    #[msg("Pool balance is insufficient")]
+    InsufficientPoolFunds,
 }
